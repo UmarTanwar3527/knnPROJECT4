@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html >
+    <head>
+    <title>Machine Learning Lab Experiment Deployment</title>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+    <style>
+    h1 {text-align: center;}
+    h2 {text-align: center;}
+    h3 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+    </style>
+    </head>
+
+<body>
+    <div class="" style="background-color:skyblue;" >
+    <div class="clearfix">
+    <div class="col-md-12">
+    <center><p style="font-size:40px;color:black;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+    <center><p style="font-size:30px;color:black;margin-top:10px;">Department of Computer Engineering</p></center> 
+    <center><p style="font-size:25px;color:black;margin-top:10px;">Machine Learning Experiment Deployment</p></center> 
+    </div>
+    </div>
+    </div>
+    <div class="login">
+    <h2 >Regression Analysis to predict the Survival</h2>
+    <h4>Developed by Mohammed Umar Tanwar</h4>
+    <form action="{{ url_for('predict')}}"method="get">
+    </div>
+    <div class="form-floating mb-3">
+    <input type="number" class="form-control" id="Age" name="Age" step="any" min="0" max="80" placeholder="0" required="required">
+    <label for="floatingInput">Enter Age</label>
+    </div>
+    <br>
+    <div class="form-floating mb-3">
+    <input type="number" class="form-control" id="SibSp" name="SibSp" step="any" min="0" max="8" placeholder="0" required="required">
+    <label for="floatingInput">Enter SibSp</label>
+    </div>
+    <br>                
+    <div class="form-floating mb-3">
+    <input type="number" class="form-control" id="Parch" name="Parch" step="any" min="0" max="6" placeholder="0" required="required">
+    <label for="floatingInput">Enter Parch</label>
+    </div>
+    <br>               
+    <div class="form-floating mb-3">
+    <input type="number" class="form-control" id="Fare" name="Fare" step="any" min="0" max="600" placeholder="0" required="required">
+    <label for="floatingInput">Enter Fare</label>
+    </div>
+    <br>                            
+    <div class="form-floating mb-3">
+    <label for="selectbox">Enter Gender</label>
+    <select name="Gender" id="Gender">
+    <option  value=1>Male</option>
+    <option  value=0>Female</option>
+    </select>
+    </div>
+    <br>
+    <div class="form-floating mb-3">
+    <input type="number" class="form-control" id="Pclass" name="Pclass" step="any" min="1" max="3" placeholder="0" required="required">
+    <label for="floatingInput">Enter Pclass</label>
+    </div>
+    <br>
+    <center>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict Survival</button>
+    </center>
+    </form>
+
+    <br>
+    <center>
+    {{ prediction_text }}                                                                            
+    </center>
+    </div>   
+    <br>                                                                        
+    <div class="" style="background-color:skyblue;" >
+    <div class="clearfix">
+    <div class="col-md-12">
+    <center><p style="font-size:25px;color:black;margin-top:20px;">Machine Learning  Experiment </p></center> 
+    </div>
+    </div>
+    </div>
+</body>
+</html>
